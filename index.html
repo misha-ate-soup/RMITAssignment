@@ -154,5 +154,65 @@
     emulator, which I have made myself!
   </p>
     
+  <h3>Description</h3>
+  <p>
+    The NES will be made entirely out of redstone, without the aid of the command block. It will consist of a 6502 CPU. 
+    Normally, the CPU runs at around 1.79 or 1.66MHz, depending on the region. Unfortunately, due to Minecraft running on 
+    Java, which is an interpreted language (and the speed of my actual computer’s CPU being mediocre), achieving that speed 
+    in game is very difficult. Thus the virtual console will run much slowly than the actual console. The CPU’s clock, in 
+    Minecraft, will be powered by a three redstone torches (which are really NOT gates in disguise) in a loop, effectively 
+    creating a clock. This clock will power the data flip-flops which “remembers” a bit every cycle, unless being written 
+    to. As for the game ROM cartridges in real life, I will build up an array of about, say, 512K of 8-bit registers and 
+    “lock” them by removing the ability to write to them, thus effectively making them read-only. I will then search for 
+    a desired game online and download its binary code, and then manually hard-code each bit into each data flip-flop. I 
+    took a course on how to build a CPU, RAM and a ALU (Arithmetic Logic Unit) so the process of building the processor 
+    should be relatively straightforward. <br>
+As for the controller, I visualise the player looking at the screen, the controller below them – in form of simple buttons
+    which corresponds to real controller. There are only eight simple digital buttons, so that means we don’t have to mess
+    around with fiddly analogue signals. <br>
+The great thing about the 6502 CPU is that it was one of the most popular CPUs back in the 1980s and it is still popular 
+    today. Thus there is a mountain of documentation about it which will be a necessity for learning how to build one. It is 
+    a common challenge for programmers to try and emulate it on modern computers through a language like C++. <br>
+I may add the ability to automatically flash the ROM with a game image through the aid of a Minecraft modification, although
+    that may be breaking some rules. In my opinion, the trickiest part to build will be the screen, as the NES had a 6-bit video
+    palette, so there are 64 different colours available for each pixel, which in Minecraft will be very tricky to build with 
+    just redstone, pistons and a limited range of blocks. Another tricky chip to port to redstone is the PPU 
+    (Picture Processing Unit), which is an early version of the modern GPU (graphics processing unit). It itself has a 2KB
+    RAM for drawing graphics, and has specialised circuitry designed to draw graphics quicker than the CPU. <br> 
+If I was to actually do this project, I would happily upload the world online and let anyone try out my emulator. 
+    It’s pretty amazing if you think about it: there are so many layers of different computer architectures on the 
+    top of each other. At the bottom is my actual computer – an x86-64 architecture. Next layer is the Java virtual machine
+    running on the top of x86. Next is the Minecraft game, which finally interprets the NES emulator down all the way to x86
+    – four layers of completely different instruction codes set!
+  </p>
+    
+  <h3>Tool and technologies</h3>
+  <p>
+    For the technology part, all I am using is my humble x86-64 architecture computer. As for the software part, I need 
+    the Java runtime environment, which Minecraft runs on. Minecraft itself is needed of course. Java is free to use, but 
+    Minecraft is $35AUD. For extensive redstone projects, which if done all by hand (500,000 data flip-flops!) will take a
+    very long time. A great online tool that lets you copy-paste redstone contraptions which saves a lot of time is 
+    available <a href="http://mordritch.com/mc_rss/">here</a>. I also use a simple Web browser like Chrome to research about the 6502.
+  </p>
+    
+  <h3>Skills required</h3>
+  Skills essential for the construction of an emulator in Minecraft are the following:
+  <ul>
+    <li>A good understanding of how redstone works in Minecraft</li>
+    <li>Good understanding of how simple logic gates connects together to make a complex chip</li>
+    <li>Skill in programming assembly code for CPUs and tracking down bugs (very difficult in assembly!)</li>
+    <li>Have expert Googling skills – required for trying to find a specific information about the architecture or the system as a whole</li>
+    <li>Experience with Minecraft. You need a good understanding of the Minecraft API if you want to program mods for the game</li>
+  </ul>
+    
+  <h3>Outcome</h3>
+  <p>
+    If the project was successful, anyone who has purchased Minecraft, will also have the ability to play classic Nintendo
+    Entertainment System games by only going to the internet and downloading a map! Anyone thinking, “Oh, I wish I had a NES
+    emulator in Minecraft,” would get their wish! This project will be a useful resource to the general public, because if 
+    they are interested to learn how the 6502 CPU works, they can download my map and have a look! I will make sure to leave
+    plenty of signs describing how a particular component works. 
+  </p>
+    
 </div>
 </body>
